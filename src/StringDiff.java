@@ -22,10 +22,12 @@ class StringDiff{
         // str length different, abcdd abcd
         // charDiff = 0, abc abc
 
-        /* I later realized it's possible to iterate over both Strings to detect edits, but it's
-            not very readable in implementation:
+        /* I realized it's also possible to iterate over both Strings to detect edits, but it's
+            less readable in implementation:
 
+            editsAllowed = 1
             if difference detected
+                editsAllowed--;
                 insert is when s1 current matches s2 next char
                 remove is when s1 next matches s2 current char
                 replace is when s1 next == s2 next
