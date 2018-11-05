@@ -54,6 +54,6 @@ class Shelter{
     }
 
     class Cat extends AnyAnimal{
-        public Dog(String name, int time){ super(name, time); }
+        public Cat(String name, int time){ super(name, time); }
     }
 }
