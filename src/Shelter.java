@@ -12,12 +12,12 @@ class Shelter{
         Shelter s = new Shelter();
         s.test1(s);
     }
-    
+
     public void test1(Shelter s){
     	/*
     	 * most testing done with dequeueAny, esp in cases if dogs or cats q is empty
     	 */
-    	System.out.println(s.dequeueAny());
+    	//System.out.println(s.dequeueAny());
     	 Dog d1 = new Dog("d1");
          Cat c1 = new Cat("c1");
          Cat c2 = new Cat("c2");
@@ -29,9 +29,9 @@ class Shelter{
          s.enqueue(c3);
          //s.enqueue(d1);
          //s.enqueue(d2);
-         
+
          System.out.println(s.dequeueAny());
-         
+
          System.out.println("d: " + dogs);
          System.out.println("c: " + cats);
          System.out.println("");
@@ -48,7 +48,7 @@ class Shelter{
 
     public void enqueue(AnyAnimal animal){
     	animal.setArrivalTime(arrivalTime++);
-    	
+
     	if (Cat.class.isInstance(animal))
     		cats.offer((Cat)animal);
     	else if (Dog.class.isInstance(animal))
@@ -84,14 +84,14 @@ class AnyAnimal{
     private int arrivalTime;
 
     public AnyAnimal(String name) { this.name = name; }
-    
+
     public void setArrivalTime(int time) { this.arrivalTime = time; }
-    
+
     public boolean arrivedEarlierThan(AnyAnimal animal){
     	if (animal == null) return true;
         return this.arrivalTime < animal.arrivalTime;
     }
-    
+
     @Override
     public String toString() { return name + " " + arrivalTime; }
 }
