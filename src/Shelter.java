@@ -14,25 +14,23 @@ class Shelter{
     }
     
     public void test1(Shelter s){
+    	/*
+    	 * most testing done with dequeueAny, esp in cases if dogs or cats q is empty
+    	 */
     	System.out.println(s.dequeueAny());
     	 Dog d1 = new Dog("d1");
          Cat c1 = new Cat("c1");
          Cat c2 = new Cat("c2");
          Cat c3 = new Cat("c3");
          Dog d2 = new Dog("d2");
-         
-         s.enqueue(d1);
+
          s.enqueue(c1);
          s.enqueue(c2);
          s.enqueue(c3);
-         s.enqueue(d2);
+         //s.enqueue(d1);
+         //s.enqueue(d2);
          
          System.out.println(s.dequeueAny());
-         System.out.println(s.dequeueDog());
-         System.out.println(s.dequeueDog());
-         System.out.println(s.dequeueCat());
-         System.out.println(s.dequeueCat());
-         System.out.println(s.dequeueCat());
          
          System.out.println("d: " + dogs);
          System.out.println("c: " + cats);
@@ -48,7 +46,6 @@ class Shelter{
         cats = new LinkedList<Cat>();
     }
 
-    // four functions to implement
     public void enqueue(AnyAnimal animal){
     	animal.setArrivalTime(arrivalTime++);
     	
