@@ -15,11 +15,13 @@ class StringDiff{
         System.out.println(onlyOneEdit("pales", "pale") == true);
         System.out.println(onlyOneEdit("pale", "bale") == true);
         System.out.println(onlyOneEdit("pale", "bake") == false);
-        System.out.println(onlyOneEdit("aab", "ba") == false);
+        System.out.println(onlyOneEdit("aab", "ba") == false);  // hits a false positive
         System.out.println(onlyOneEdit("aaa", "a") == false);
         System.out.println(onlyOneEdit("aaa", "xyz") == false);
         System.out.println(onlyOneEdit("abcdd", "abcd") == true);
         System.out.println(onlyOneEdit("abc", "abc") == true);
+
+        System.out.println(onlyOneEdit("ba", "aab") == false);
 
         /*----- MORE TEST CASES FOR COUNTING CHAR DIFF ------*/
         // double counting, a  aaa
