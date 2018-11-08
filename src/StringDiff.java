@@ -2,7 +2,6 @@ import java.util.*;
 
 /**
 *   CASE ONE: Or or one number of edits for string difference
-*   Author: Steven Bonilla
 */
 
 class StringDiff{
